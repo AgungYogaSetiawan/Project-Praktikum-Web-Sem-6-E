@@ -11,6 +11,12 @@ if(isset($_GET['page'])){
         case 'karyawancreate':
             include "karyawan/karyawancreate.php";
             break;
+        case 'karyawancreate':
+            include "karyawan/karyawanupdate.php";
+            break;
+        case 'karyawancreate':
+            include "karyawan/karyawandelete.php";
+            break;
         case 'bagian':
             include "bagian.php";
             break;
