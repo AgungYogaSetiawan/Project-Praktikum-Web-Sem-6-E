@@ -16,6 +16,7 @@
             $data = $statement->fetch();
 
             if (isset($_POST['button_simpan'])) {
+                $id = $_POST['id'];
                 $nik = $_POST['nik'];
                 $nama_karyawan = $_POST['nama_karyawan'];
                 $alamat = $_POST['alamat'];
@@ -23,7 +24,7 @@
                 $divisi = $_POST['divisi'];
                 $jabatan = $_POST['jabatan'];
 
-                $updateSQL = "UPDATE `bagian` SET `nik` = ?, `nama_karyawan` = ?, 'alamat' = ?, `jenis_kelamin` = ?, `divisi` = ?, 'jabatan' = ? WHERE `bagian`.`id` = ?";
+                $updateSQL = "UPDATE `bagian` SET `nik` = ?, `nama_karyawan` = ?, `alamat` = ?, `jenis_kelamin` = ?, `divisi` = ?, `jabatan` = ? WHERE `bagian`.`id` = ?";
 
                 $database = new Database();
                 $connection = $database->getConnection();
@@ -36,7 +37,6 @@
                 $statement->bindParam(6, $jabatan);
                 $statement->bindParam(7, $id);
                 $statement->execute();
-
                 header('Location: main.php?page=bagian');
             }
             ?>
