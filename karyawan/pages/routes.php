@@ -6,10 +6,10 @@ if(isset($_GET['page'])){
             include "dashboard.php";
             break;
         case 'karyawan':
-            include "karyawan.php";
+            include "karyawan/karyawan.php";
             break;
         case 'karyawancreate':
-            include "karyawancreate.php";
+            include "karyawan/karyawancreate.php";
             break;
         case 'bagian':
             include "bagian.php";
