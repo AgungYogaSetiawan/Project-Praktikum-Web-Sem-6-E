@@ -77,14 +77,25 @@
                 </label>
             </div>
             <div class="mb-3">
-                <label for="divisi" class="form-label">Status Menikah</label>
+                <label for="divisi" class="form-label">Divisi</label>
                 <select class="form-select" aria-label="Default select example" name="divisi" required>
                     <option value="">Pilih Divisi</option>
                     <option value="Divisi Produksi" <?php echo ($data['divisi'] == 'Divisi Produksi') ? " selected" : "" ?>>Divisi Produksi</option>
                     <option value="Divisi Pemasaran" <?php echo ($data['divisi'] == 'Divisi Pemasaran') ? " selected" : "" ?>>Divisi Pemasaran</option>
                     <option value="Divisi Personalia" <?php echo ($data['divisi'] == 'Divisi Personalia') ? " selected" : "" ?>>Divisi Personalia</option>
-                    <option value="Divisi Pembalanjaan" <?php echo ($data['status_menikah'] == 'Divisi Pembalanjaan') ? " selected" : "" ?>>Divisi Pembalanjaan</option>
-                    <option value="Divisi Umum" <?php echo ($data['status_menikah'] == 'Divisi Umum') ? " selected" : "" ?>>Divisi Umum</option>
+                    <option value="Divisi Pembalanjaan" <?php echo ($data['divisi'] == 'Divisi Pembalanjaan') ? " selected" : "" ?>>Divisi Pembalanjaan</option>
+                    <option value="Divisi Umum" <?php echo ($data['divisi'] == 'Divisi Umum') ? " selected" : "" ?>>Divisi Umum</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="jabatan" class="form-label">Jabatan</label>
+                <select class="form-select" aria-label="Default select example" name="jabatan" required>
+                    <option value="">Pilih Jabatan</option>
+                    <option value="Ketua Pimpinan" <?php echo ($data['jabatan'] == 'Ketua Pimpinan') ? " selected" : "" ?>>Ketua Pimpinan</option>
+                    <option value="Wakil Ketua" <?php echo ($data['jabatan'] == 'Wakil Ketua') ? " selected" : "" ?>>Wakil Ketua</option>
+                    <option value="Sekretaris" <?php echo ($data['jabatan'] == 'Sekretaris') ? " selected" : "" ?>>Sekretaris</option>
+                    <option value="Bendahara" <?php echo ($data['jabatan'] == 'Bendahara') ? " selected" : "" ?>>Bendahara</option>
+                    <option value="Staff" <?php echo ($data['jabatan'] == 'Staff') ? " selected" : "" ?>>Staff</option>
                 </select>
             </div>
             <button class="btn btn-success" type="submit" name="button_simpan"><span data-feather="database"></span> Simpan</button>
